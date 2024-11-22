@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/bezkoder/nodejs-express-mysql.git
+    repoURL: https://github.com/zeynep59/nodejs-express-mysql.git
     targetRevision: HEAD
     path: .
   destination:
