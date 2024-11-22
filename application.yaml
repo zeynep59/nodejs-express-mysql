@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/zeynep59/nodejs-express-mysql.git
     targetRevision: HEAD
-    path: .
+    path: manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
