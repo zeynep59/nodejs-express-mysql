@@ -1,0 +1,25 @@
+apiVersion: codewaycasestudy.io/v1alpha1
+kind: Application
+metadata:
+  name: example-project
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/bezkoder/nodejs-express-mysql.git
+    targetRevision: HEAD
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
+
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
+      
